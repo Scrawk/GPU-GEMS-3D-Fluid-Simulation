@@ -1,0 +1,47 @@
+
+#pragma kernel CSMain
+#define NUM_THREADS 8
+
+float4 _Size;
+
+RWStructuredBuffer<float> _Write;
+
+[numthreads(NUM_THREADS,NUM_THREADS,NUM_THREADS)]
+void CSMain (int3 id : SV_DispatchThreadID)
+{
+
+    int idx = id.x + id.y*_Size.x + id.z*_Size.x*_Size.y;
+    
+    float obstacle = 0;
+    
+    if(id.x-1 < 0) obstacle = 1;
+    if(id.x+1 > (int)_Size.x-1) obstacle = 1;
+    
+    if(id.y-1 < 0) obstacle = 1;
+    if(id.y+1 > (int)_Size.y-1) obstacle = 1;
+    
+    if(id.z-1 < 0) obstacle = 1;
+    if(id.z+1 > (int)_Size.z-1) obstacle = 1;
+    
+    _Write[idx] = obstacle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

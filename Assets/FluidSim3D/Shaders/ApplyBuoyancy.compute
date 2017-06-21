@@ -1,0 +1,47 @@
+
+#pragma kernel CSMain
+#define NUM_THREADS 8
+
+float4 _Size, _Up;
+float _AmbientTemperature, _DeltaTime, _Buoyancy, _Weight;
+
+RWStructuredBuffer<float3> _Write;
+StructuredBuffer<float3> _Velocity;
+StructuredBuffer<float> _Density, _Temperature;
+
+[numthreads(NUM_THREADS,NUM_THREADS,NUM_THREADS)]
+void CSMain (int3 id : SV_DispatchThreadID)
+{
+
+    int idx = id.x + id.y*_Size.x + id.z*_Size.x*_Size.y;
+    
+    float T = _Temperature[idx];
+    float D = _Density[idx];
+    float3 V = _Velocity[idx];
+    
+    if(T > _AmbientTemperature)
+    	V += (_DeltaTime * (T - _AmbientTemperature) * _Buoyancy - D * _Weight) * _Up.xyz;
+    
+    _Write[idx] = V;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
