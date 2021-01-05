@@ -52,6 +52,9 @@ namespace FluidSim3DProject
 
 		void Start () 
 		{
+			QualitySettings.vSyncCount = 1;
+			Application.targetFrameRate = 60;
+
 			//Dimension sizes must be pow2 numbers
 			m_width = Mathf.ClosestPowerOfTwo(m_width);
 			m_height = Mathf.ClosestPowerOfTwo(m_height);

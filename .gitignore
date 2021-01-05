@@ -3,3 +3,12 @@
 ################################################################################
 
 /UserSettings
+/Temp
+/Packages
+/obj/Debug
+/Logs
+/Library
+/.vs/GPU-GEMS-3D-Fluid-Simulation/v16/TestStore/0
+/.vs/GPU-GEMS-3D-Fluid-Simulation/v16
+/GPU-GEMS-3D-Fluid-Simulation.sln
+/Assembly-CSharp.csproj
