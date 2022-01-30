@@ -7,4 +7,12 @@ This project was originally written when Unity 4 was current and at that time re
 
 ![3D Fluid Simulation](./Media/FluidSim3D.jpg)
 
+[Position-Based-Dynamics](https://github.com/Scrawk/Position-Based-Dynamics)\
+[PBD-Fluid-in-Unity](https://github.com/Scrawk/PBD-Fluid-in-Unity)\
+[GPU-GEMS-NBody-Simulation](https://github.com/Scrawk/GPU-GEMS-NBody-Simulation)\
+[GPU-GEMS-2D-Fluid-Simulation](https://github.com/Scrawk/GPU-GEMS-2D-Fluid-Simulation)\
+[GPU-GEMS-3D-Fluid-Simulation](https://github.com/Scrawk/GPU-GEMS-3D-Fluid-Simulation)\
+[CyclonePhysicsEngine](https://github.com/Scrawk/CyclonePhysicsEngine)\
+[2D-Deformable-body-in-Unity](https://github.com/Scrawk/2D-Deformable-body-in-Unity)
+
 
